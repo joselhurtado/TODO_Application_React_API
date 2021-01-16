@@ -3,9 +3,9 @@ import React, { useState, useEffect } from "react";
 //create your first component
 export function Home() {
 	const [task, setTask] = useState([
-		"Walk dog",
-		"Wash clothes",
-		"Clean house"
+		"Learn Javascript",
+		"Schedule Mentorships",
+		"Practice React"
 	]);
 	const [userInput, setUserInput] = useState("");
 
