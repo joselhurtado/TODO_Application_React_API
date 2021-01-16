@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 //create your first component
 export function Home() {
@@ -18,10 +18,10 @@ export function Home() {
 	return (
 		<div className="text-center mt-5">
 			<div className="container form">
-				<h1 className="todo-title"> Todos</h1>
-				<div className="todo-list">
+				<h1 className="todo-title">TODO LIST</h1>
+				<div className="input-group mb-3">
 					<input
-						className="input-group mb-3 form-control"
+						className="tasks form-control"
 						type="text"
 						onChange={event => setUserInput(event.target.value)}
 						value={userInput}
@@ -34,6 +34,7 @@ export function Home() {
 						Add Item
 					</span>
 				</div>
+				<br />
 
 				<div className="list-group">
 					{task.map((value, index) => {
