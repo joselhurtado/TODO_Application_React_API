@@ -21,25 +21,28 @@ export function Home() {
 				<h1 className="todo-title"> Todos</h1>
 				<div className="todo-list">
 					<input
-						className="tasks input-group mb-3 form-control"
+						className="input-group mb-3 form-control"
 						type="text"
-						onChange={e => setUserInput(e.target.value)}
+						onChange={event => setUserInput(event.target.value)}
 						value={userInput}
 						onKeyUp={handleKeyUp}
 						placeholder="Add a new task"
 						aria-label="Task on the list"
 						aria-describedby="basic-addon2"
 					/>
+					<span className="input-group-text" id="basic-addon2">
+						Add Item
+					</span>
+				</div>
 
-					<ul className="list-group">
-						{task.map((value, index) => {
-							return (
-								<li className="list-group-item" key={index}>
-									{value}
-								</li>
-							);
-						})}
-					</ul>
+				<div className="list-group">
+					{task.map((value, index) => {
+						return (
+							<li className="list-group-item" key={index}>
+								{value}
+							</li>
+						);
+					})}
 				</div>
 			</div>
 		</div>
